@@ -15,4 +15,7 @@ export class PokemonService {
   getPokemons(){
     return this.http.get<any>(`${this.baseUrl}/pokemon`)
   }
+  getPokemonDetail(name:string){
+    return this.http.get<any>(`${this.baseUrl}/pokemon/${name}`)
+  }
 }
